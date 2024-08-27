@@ -5,6 +5,7 @@ exports.getAllProposals = async (req, res) => {
 
   res.status(200).json({
     status: 'success',
+    result: proposals.length,
     data: proposals,
   });
 };

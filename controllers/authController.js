@@ -63,9 +63,7 @@ exports.protect = cathcAsync(async (req, res, next) => {
   }
 
   if (!token) {
-    return next(
-      new AppError('You are not logged in! Please log in to get access.', 401)
-    );
+    return next(new AppError('Access denied', 401));
   }
 
   next();
